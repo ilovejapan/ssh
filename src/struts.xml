@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="ssh6" namespace="/" extends="struts-default,json-default">
+	
+		<action name="login" class="UserAction" method="postUser">
+		
+			<result name="success">/user.jsp</result>
+			
+			<result name="error">/error.jsp</result>
+			
+		</action>
+		
+		
+		<action name="ContinentsAJAX" class="ContinentsAction" method="postContinents">
+		
+			<result name="continents" type="json">
+			
+				<param name="includeProperties">
+					string
+				</param>
+				
+			</result>
+			
+		</action>
+		
+		
+		<action name="StatesAJAX" class="StatesAction" method="postStates">
+		
+			<result name="states" type="json">
+			
+				<param name="includeProperties">
+					string
+				</param>
+				
+			</result>
+			
+		</action>
+		
+		
+		<action name="AreasAJAX" class="AreasAction" method="postAreas">
+		
+			<result name="areas" type="json">
+			
+				<param name="includeProperties">
+					string
+				</param>
+				
+			</result>
+			
+		</action>
+		
+	</package>
+
+</struts>    
